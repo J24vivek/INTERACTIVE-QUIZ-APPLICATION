@@ -8,7 +8,7 @@
 
 *DOMAIN*    : Front End Developement
 
-*DURATION*  : 4 Weeks
+*DURATION*  : 4 Weeks ( 5 Jan to 5 Feb 2025 )
 
 *MENTOR*    : NEELA SANTOSH
 
