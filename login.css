@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+span {
+    font-size: 0.9rem;
+    color: #757373;
+}
+
+h6 {
+    font-size: 1.1rem;
+    color: rgb(24, 24, 49);
+}
+
+
+
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.952);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 8vw;
+    padding-top: 10px;
+}
+
+nav img {
+    width: 250px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+nav .navlist {
+    display: flex;
+}
+
+#menu-btn {
+    width: 45px;
+    height: 45px;
+    display: none;
+}
+
+#menu-close {
+    display: none;
+}
+
+
+
+nav .navlist ul {
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+
+nav .navlist ul li {
+    list-style: none;
+    margin-left: 30px;
+
+}
+
+nav .navlist ul li a {
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+
+nav .navlist ul li a.active,
+nav .navlist ul li a:hover {
+    color: rgb(36, 228, 180);
+}
+
+.login a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 10px 35px;
+    background-color: rgb(86, 218, 207);
+    font-weight: 500;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.login a.yellow {
+    color: rgb(91, 187, 46);
+    background-color: rgb(135, 228, 197);
+    /* box-shadow: 8px 8px 32px 8px #caab55; */
+    transition: 0.3s ease;
+}
+
+.login a.yellow:hover,
+.login a.yellow.active {
+    border: 1px solid rgb(165, 233, 233);
+    background: #35c5f1;
+    color: #333;
+}
+
+
+
+
+
+
+/* signlogin */
+.signlogin {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    padding-left: 10%;
+    gap: 0;
+}
+
+.signlogin .login {
+    width: 50%;
+    text-align: center;
+}
+
+.login i {
+    color: #200bd4;
+}
+
+.signlogin .login .btnL {
+    width: 60%;
+    border: 1px solid black;
+    padding: 7px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+
+}
+
+.signlogin .login .btnL:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form {
+    width: 30%;
+    height: auto;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px gray;
+}
+
+.title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+.signup-form .input-boxes {
+    margin-top: 0;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 5px 0;
+    position: relative;
+}
+
+.input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #7d2ae8;
+}
+
+.input-box i {
+    position: absolute;
+    color: #7d2ae8;
+    font-size: 17px;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.text a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.button input {
+    color: #fff;
+    background: #7d2ae8;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.button input:hover {
+    background: #5b13b9;
+}
+
+label {
+    color: #5b13b9;
+    cursor: pointer;
+}
+
+label:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 769px) {
+    nav {
+        padding: 15px 20px;
+        box-shadow: 0 0 10px 0 #757373;
+    }
+
+    nav img {
+        width: 180px;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    #menu-close {
+        display: initial;
+        font-size: 2rem;
+        color: rgb(46, 35, 35);
+        padding: 30px 0 20px 10px;
+    }
+
+    nav .navlist ul {
+        position: absolute;
+        top: 65px;
+        right: -340px;
+        width: 220px;
+        height: 100vh;
+        background-color: rgba(174, 160, 235, 0.945);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgb(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+
+    nav .navlist ul.active {
+        right: -100px;
+    }
+
+    nav .navlist ul li a.active,
+    nav .navlist ul li a:hover {
+        color: rgb(202, 48, 81);
+    }
+
+    nav .navlist ul li {
+        padding: 20px 0 20px 10px;
+        margin-left: 0;
+    }
+
+    nav .navlist ul li a {
+        color: black;
+        font-weight: 600;
+    }
+
+    .login a {
+        text-decoration: none;
+        font-size: 0.9rem;
+        padding: 10px 35px;
+        background-color: rgb(51, 49, 49);
+        font-weight: 500;
+        border-radius: 5px;
+        margin-left: 0;
+    }
+
+
+
+
+    /* signlogin */
+    .signlogin {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        width: 100%;
+        padding-left: 0;
+        gap: 0;
+    }
+
+    .signlogin .login {
+        width: 50%;
+        text-align: center;
+    }
+
+    .signlogin .login .btnL {
+        width: 60%;
+    }
+
+    .signup-form {
+        width: 40%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+
+
+}
+
+
+@media(max-width:450px) {
+
+    nav img {
+        width: 165px;
+    }
+
+    #menu-close {
+        display: initial;
+        font-size: 2rem;
+        color: rgb(46, 35, 35);
+        padding: 30px 0 20px 0;
+    }
+
+    nav .navlist ul {
+        position: absolute;
+        top: 60px;
+        right: -340px;
+        width: 170px;
+        height: 100vh;
+        background-color: rgba(174, 160, 235, 0.945);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgb(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+
+    nav .navlist ul.active {
+        right: -100px;
+    }
+
+    nav .navlist ul li a.active,
+    nav .navlist ul li a:hover {
+        color: rgb(202, 48, 81);
+    }
+
+    nav .navlist ul li {
+        padding: 5px 0 20px 0;
+        margin-left: 0;
+    }
+
+    nav .navlist ul li a {
+        color: black;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .login a {
+        text-decoration: none;
+        font-size: 0.8rem;
+        padding: 10px 30px;
+        background-color: rgb(80, 231, 219);
+        font-weight: 500;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+
+
+     /* signlogin */
+     .signlogin {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        width: 100%;
+        padding-left: 0;
+        gap: 0;
+    }
+
+    .signlogin .login {
+        width: 100%;
+        text-align: center;
+    }
+
+    .signlogin .login .btnL {
+        width: 85%;
+    }
+
+    .signup-form {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+}

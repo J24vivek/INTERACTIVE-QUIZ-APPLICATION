@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Quizzes.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+    <nav>
+        <img src="logoo.png" alt="">
+        <div class="navlist">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-arrow-right-from-bracket"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a class="active" href="Quizzes.html">Quizzes</a></li>
+                <li><a href="#">Create Quiz</a></li>
+                <li class="login"><a class="yellow" href="login.html">Sign Up.</a></li>
+            </ul>
+            <img id="menu-btn" src="Menubtn.webp" alt="">
+        </div>
+    </nav>
+
+
+
+
+    <!-- Quiz Topics -->
+    <section class="secQuizzes">
+        <h2>Quizzes On Full Stack Web Developemnet</h2>
+        <div class="quiz-box">
+            <img src="HTML2.png" alt="">
+            <button class="html-start">START</button>
+        </div>
+        <div class="quiz-box">
+            <img src="CSSimg.png" alt="">
+            <button class="html-start">START</button>
+        </div>
+        <div class="quiz-box">
+            <img src="JAVASCRIPT2.png" alt="">
+            <button class="html-start">START</button>
+        </div>
+        <div class="quiz-box">
+            <img src="Bootstrapimg.png" alt="">
+            <button class="html-start">START</button>
+        </div>
+        <div class="quiz-box">
+            <img src="react.png" alt="">
+            <button class="html-start">START</button>
+        </div>
+        <div class="quiz-box">
+            <img src="node.png" alt="">
+            <button class="html-start">START</button>
+        </div>
+        <div class="quiz-box">
+            <img src="expresss.png" alt="">
+            <button class="html-start">START</button>
+        </div>
+        <div class="quiz-box">
+            <img src="mysql.jpeg" alt="">
+            <button class="html-start">START</button>
+        </div>
+        <div class="quiz-box">
+            <img src="mongoDB.png" alt="">
+            <button class="html-start">START</button>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Popup for html Quiz -->
+    <section class="html-popup-info">
+
+        <div class="info-image">
+            <img src="HTML2.png" alt="">
+        </div>
+        <div class="infodata">
+            <h2>Basic Of HTML</h2>
+            <p>The test contains 20 questions and there is no time limit. The test is not
+                official, it's just a nice way
+                to
+                see how much you know, or don't know, about HTML. You will get 1 point for each correct answer. At the
+                end
+                of the Quiz, your total score will be displayed.</p>
+            <button class="info-btn exit-btn">Exit QUIZ</button>
+            <a href="VQuiz.html" class="info-btn start-btn">Start QUIZ</a>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        $(`#menu-btn`).click(function () {
+            $('nav .navlist ul').addClass('active')
+        });
+        $(`#menu-close`).click(function () {
+            $('nav .navlist ul').removeClass('active')
+        });
+
+    </script>
+
+
+    <script src="Quizzes.js"></script>
+    <script src="HTMLque.js"></script>
+</body>
+
+</html>

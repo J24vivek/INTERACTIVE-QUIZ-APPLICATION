@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+span {
+    font-size: 0.9rem;
+    color: #757373;
+}
+
+h6 {
+    font-size: 1.1rem;
+    color: rgb(24, 24, 49);
+}
+
+
+
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.952);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 8vw;
+    padding-top: 10px;
+}
+
+nav img {
+    width: 250px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+nav .navlist {
+    display: flex;
+}
+
+#menu-btn {
+    width: 45px;
+    height: 45px;
+    display: none;
+}
+
+#menu-close {
+    display: none;
+}
+
+
+
+nav .navlist ul {
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+
+nav .navlist ul li {
+    list-style: none;
+    margin-left: 30px;
+
+}
+
+nav .navlist ul li a {
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+
+nav .navlist ul li a.active,
+nav .navlist ul li a:hover {
+    color: chocolate;
+}
+
+.login a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 10px 35px;
+    background-color: rgb(51, 49, 49);
+    font-weight: 500;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.login a.yellow {
+    color: black;
+    background-color: rgb(135, 228, 197);
+    /* box-shadow: 8px 8px 32px 8px #caab55; */
+    transition: 0.3s ease;
+}
+
+.login a.yellow:hover {
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+/* correct & incorrect styling */
+.correct {
+    background-color: rgba(245, 60, 70, 0.527);
+}
+
+.wrong {
+    background-color: rgba(152, 231, 105, 0.349);
+}
+
+.option {
+    cursor: pointer;
+}
+
+
+/* qcontainer */
+.qcontainer {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    padding: 20px;
+}
+
+.qcontainer .h1navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(10, 208, 223);
+}
+
+.qcontainer .h1navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.quiz-section {
+    position: relative;
+    width: 100%;
+    background: rgb(254, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.8s ease-in-out;
+    transition-delay: 0.25s;
+    gap: 30px;
+}
+
+.quiz-section .que-quiz {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.quiz-section .que-quiz h1 {
+    font-size: 32px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.quiz-section .que-quiz .quiz-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    border-bottom: 1px solid rgb(71, 44, 226);
+}
+
+.quiz-section .que-quiz .quiz-header span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.quiz-section .que-quiz .quiz-header .header-score {
+    background: rgb(10, 208, 223);
+    border-radius: 5px;
+    padding: 2px 15px;
+}
+
+.quiz-section .que-quiz .question-text {
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.quiz-section .que-quiz .option-list {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.quiz-section .que-quiz .option {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 4px;
+    font-size: 17px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-section .que-quiz .option:hover {
+    background: rgba(135, 207, 235, 0.349);
+    border-color: black;
+}
+
+.quiz-section .quiz-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(37, 50, 230);
+    padding-top: 20px;
+}
+
+.quiz-footer .question-total {
+    font-size: 16px;
+    padding-left: 25px;
+    font-weight: 600;
+}
+
+.quiz-footer .next-btn {
+    width: 110px;
+    height: 40px;
+    background: rgb(10, 208, 223);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border: 1px solid gray;
+    border-radius: 7px;
+    cursor: pointer;
+    /* pointer-events: none; */
+}
+
+.quiz-footer .next-btn:hover {
+    background: rgb(25, 176, 247);
+    border: 1px solid black;
+}
+
+
+.quiz-footer .previous-btn {
+    width: 110px;
+    height: 40px;
+    background: rgb(10, 208, 223);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border: 1px solid gray;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.quiz-footer .previous-btn:hover {
+    background: rgb(25, 176, 247);
+    border: 1px solid black;
+}
+
+.quiz-footer .submit-btn {
+    width: 110px;
+    height: 40px;
+    background: rgb(74, 236, 174);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border: 1px solid gray;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.quiz-footer .submit-btn:hover {
+    background: rgb(13, 228, 192);
+    border: 1px solid black;
+}
+
+
+
+
+/* queindex */
+.queindex {
+    width: 40%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-left: 1px solid black;
+}
+
+.queindex .indexQtitle {
+    width: 100%;
+    align-items: center;
+}
+
+.queindex .indexQ {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.queindex .indexQ a {
+    text-decoration: none;
+    margin: 10px;
+    padding: 7px 15px 5px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    background: rgba(244, 165, 96, 0.658);
+}
+
+.queindex .indexQ a:hover {
+    background: rgba(244, 165, 96, 0.911);
+}
+
+
+
+
+
+
+.result-popup {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.result-popup h2 {
+    font-size: 3rem;
+}
+
+.result-popup p {
+    font-size: 1.5rem;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border-radius: 3px;
+    margin-right: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.Exam-history {
+    padding: 10px 20px;
+    background-color: #e1e445;
+    border-radius: 3px;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsiveness */
+
+@media (max-width: 769px) {
+    .quiz-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .queindex {
+        width: 100%;
+        height: auto;
+        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:450px) {
+
+    .quiz-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .queindex {
+        width: 100%;
+    }
+
+    .queindex .indexQ {
+        margin-left: 7px;
+    }
+
+    .quiz-section .que-quiz {
+        padding: 5px;
+    }
+
+    .quiz-section .que-quiz .question-text {
+        margin-left: 5px;
+    }
+
+    .result-popup {
+        height: 80vh;
+        margin-top: 20px;
+    }
+    .popup-content{
+        height: 100%;
+    }
+    .result-popup img {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .result-popup h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .result-popup p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+}
